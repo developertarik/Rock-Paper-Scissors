@@ -11,19 +11,32 @@ function computerPlay(){
 }
 //Play round
 //a
+let player = 0;
+let computer = 0;
 function playRound(playerSelection,computerSelection){
+  
   //draw
  if (playerSelection===computerSelection){
-   return "Draw"
+   console.log( "Draw")
  }
   //player win
- else if ((playerSelection =="Rock" && computerSelection=="Scissors")||(playerSelection =="Paper" && computerSelection =="Rock") ||( playerSelection=="Paper"&& computerSelection=="Scissors") ) {
-  return "win" 
+ else if ((playerSelection =="Rock" && computerSelection=="Scissors")||(playerSelection =="Paper" && computerSelection =="Rock") ||( playerSelection=="Scissors"&& computerSelection=="Paper") ) {
+  player = player +1;
+  console.log(`Player wins player now${player}points`)
+  console.log( "player win" )
  }
   //computer win
-  else if ((computerSelection=="Paper"&& playerSelection==="Rock") ||( playerSelection=="Paper"&& computerSelection=="Rock" )|| (playerSelection=="Scissors"&& computerSelection=="Paper")|| (playerSelection=="Scissors"&& computerSelection=="Rock")){
-    return "computerwin";
+  else if ((computerSelection=="Paper"&& playerSelection==="Rock") ||( playerSelection=="Paper"&& computerSelection=="Rock" )|| (playerSelection=="Paper"&& computerSelection=="Scissors")|| (playerSelection=="Scissors"&& computerSelection=="Rock")){
+    computer = computer +1;
+  console.log(`Computer wins computer now ${computer}points`)
+    console.log( "computerwin");
   }
+}
+function game() {
+
+  for (let i = 0; i <5; i++) {
+    playRound()
+ }
 }
 
 //player selection
