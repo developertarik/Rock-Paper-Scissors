@@ -14,25 +14,22 @@ function computerPlay(){
 let player = 0;
 let computer = 0;
 function playRound(playerSelection,computerSelection){
-  playerSelection = prompt("Rock, Paper,Scissors?");
+  playerSelection = prompt ("Rock,Paper,Scissors")
   console.log(playerSelection)
   computerSelection = computerPlay();
   console.log(computerSelection)
   //draw
  if (playerSelection===computerSelection){
-   console.log( "Draw")
+   console.log(`Draw, Player selection: ${playerSelection} computer selection: ${computerSelection}`)
  }
   //player win
  else if ((playerSelection =="Rock" && computerSelection=="Scissors")||(playerSelection =="Paper" && computerSelection =="Rock") ||( playerSelection=="Scissors"&& computerSelection=="Paper") ) {
   player = player +1;
-  console.log(`Player wins player now${player}points`)
-  console.log( "player win" )
- }
+  console.log(`Player Wins, Player Selection:${playerSelection} Computer Selection:${computerSelection}`) }
   //computer win
   else if ((computerSelection=="Paper"&& playerSelection==="Rock") ||( playerSelection=="Paper"&& computerSelection=="Rock" )|| (playerSelection=="Paper"&& computerSelection=="Scissors")|| (playerSelection=="Scissors"&& computerSelection=="Rock")){
     computer = computer +1;
-  console.log(`Computer wins computer now ${computer}points`)
-    console.log( "computerwin");
+    console.log(`Computer Wins, Computer Selection :${computerSelection} player selection: ${playerSelection}`)
   }
 }
 function game() {
