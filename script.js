@@ -1,7 +1,11 @@
+
 //Bilgisayarın seçimleri
 function computerPlay(){
-  computerSelection = ["Rock","Paper","Scissors"]
+  let computer_choices = ["Rock","Paper","Scissors"]; 
+  let random_choice =computer_choices[Math.floor(Math.random()*computer_choices.length)] 
+  return random_choice;
 }
+console.log(computerPlay())
 //kimin kazandığını kontrol
 function gameControl(playerSelection,computerSelection){
 
