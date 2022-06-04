@@ -14,7 +14,10 @@ function computerPlay(){
 let player = 0;
 let computer = 0;
 function playRound(playerSelection,computerSelection){
-  
+  playerSelection = prompt("Rock, Paper,Scissors?");
+  console.log(playerSelection)
+  computerSelection = computerPlay();
+  console.log(computerSelection)
   //draw
  if (playerSelection===computerSelection){
    console.log( "Draw")
@@ -34,16 +37,13 @@ function playRound(playerSelection,computerSelection){
 }
 function game() {
 
-  for (let i = 0; i <5; i++) {
+  for (let i = 0; i <4; i++) {
     playRound()
  }
 }
 
 //player selection
-const playerSelection = prompt("Rock, Paper,Scissors?");
-console.log(playerSelection)
 //computer selection
-const computerSelection = computerPlay();
-console.log(computerSelection)
+ 
 //computer selction
-console.log(playRound(playerSelection,computerSelection))
+game()
