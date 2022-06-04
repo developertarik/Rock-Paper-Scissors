@@ -15,21 +15,22 @@ let player = 0;
 let computer = 0;
 function playRound(playerSelection,computerSelection){
   playerSelection = prompt ("Rock,Paper,Scissors")
-  console.log(playerSelection)
+  const playerSelection2 = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+  console.log(playerSelection2);
   computerSelection = computerPlay();
   console.log(computerSelection)
   //draw
- if (playerSelection===computerSelection){
-   console.log(`Draw, Player selection: ${playerSelection} computer selection: ${computerSelection}`)
+ if (playerSelection2===computerSelection){
+   console.log(`Draw, Player selection: ${playerSelection2} computer selection: ${computerSelection}`)
  }
   //player win
- else if ((playerSelection =="Rock" && computerSelection=="Scissors")||(playerSelection =="Paper" && computerSelection =="Rock") ||( playerSelection=="Scissors"&& computerSelection=="Paper") ) {
+ else if ((playerSelection2 =="Rock" && computerSelection=="Scissors")||(playerSelection2 =="Paper" && computerSelection =="Rock") ||( playerSelection2=="Scissors"&& computerSelection=="Paper") ) {
   player = player +1;
-  console.log(`Player Wins, Player Selection:${playerSelection} Computer Selection:${computerSelection}`) }
+  console.log(`Player Wins, Player Selection:${playerSelection2} Computer Selection:${computerSelection}`) }
   //computer win
-  else if ((computerSelection=="Paper"&& playerSelection==="Rock") ||( playerSelection=="Paper"&& computerSelection=="Rock" )|| (playerSelection=="Paper"&& computerSelection=="Scissors")|| (playerSelection=="Scissors"&& computerSelection=="Rock")){
+  else if ((computerSelection=="Paper"&& playerSelection2==="Rock") ||( playerSelection2=="Paper"&& computerSelection=="Rock" )|| (playerSelection2=="Paper"&& computerSelection=="Scissors")|| (playerSelection2=="Scissors"&& computerSelection=="Rock")){
     computer = computer +1;
-    console.log(`Computer Wins, Computer Selection :${computerSelection} player selection: ${playerSelection}`)
+    console.log(`Computer Wins, Computer Selection :${computerSelection} player selection: ${playerSelection2}`)
   }
 }
 function game() {
