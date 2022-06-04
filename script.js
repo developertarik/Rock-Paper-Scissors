@@ -21,7 +21,7 @@ function playRound(playerSelection,computerSelection){
   return "win" 
  }
   //computer win
-  else if ((computerSelection=="Paper"&& playerSelection==="Rock") ||( playerSelection=="Paper"&& computerSelection=="Rock" )|| (playerSelection=="Scissors"&& computerSelection=="Paper")){
+  else if ((computerSelection=="Paper"&& playerSelection==="Rock") ||( playerSelection=="Paper"&& computerSelection=="Rock" )|| (playerSelection=="Scissors"&& computerSelection=="Paper")|| (playerSelection=="Scissors"&& computerSelection=="Rock")){
     return "computerwin";
   }
 }
