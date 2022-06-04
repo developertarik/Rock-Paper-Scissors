@@ -7,32 +7,30 @@ algoritma
 function computerPlay(){
   let computer_choices = ["Rock","Paper","Scissors"]; 
   let random_choice =computer_choices[Math.floor(Math.random()*computer_choices.length)] 
-  return random_choice;
+  return(random_choice);
 }
-console.log(computerPlay())
 //Play round
+//a
 function playRound(playerSelection,computerSelection){
   //draw
-  if (playerSelection===computerSelection){
-    console.log("Draw");
-  }
+ if (playerSelection===computerSelection){
+   return "Draw"
+ }
   //player win
-  else if ((playerSelection =="Rock" && computerSelection=="Scissors")||(playerSelection =="Paper" && computerSelection =="Rock") ||( playerSelection=="Scissors"&& computerSelection=="Paper") ) {
-    console.log ("player win");
-  }
+ else if ((playerSelection =="Rock" && computerSelection=="Scissors")||(playerSelection =="Paper" && computerSelection =="Rock") ||( playerSelection=="Paper"&& computerSelection=="Scissors") ) {
+  return "win" 
+ }
   //computer win
-  else if ((playerSelection=="Scissors"&& computerSelection=="Rock") ||( playerSelection=="Paper"&& computerSelection=="Rock" )|| (playerSelection=="Scissors"&& computerSelection=="Paper")){
-    console.log("computer win");
+  else if ((computerSelection=="Paper"&& playerSelection==="Rock") ||( playerSelection=="Paper"&& computerSelection=="Rock" )|| (playerSelection=="Scissors"&& computerSelection=="Paper")){
+    return "computerwin";
   }
 }
-//game
-function game() {
-  for (let i = 0; i <5; i++) {
-    
-  }
-}
+
 //player selection
 const playerSelection = prompt("Rock, Paper,Scissors?");
+console.log(playerSelection)
 //computer selection
 const computerSelection = computerPlay();
+console.log(computerSelection)
+//computer selction
 console.log(playRound(playerSelection,computerSelection))
