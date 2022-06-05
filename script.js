@@ -15,14 +15,17 @@ let player = 0;
 let computer = 0;
 function playRound(playerSelection,computerSelection){
   playerSelection = prompt ("Rock,Paper,Scissors")
-  const playerSelection2 = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+  //1.harfi al büyük yap diğer harfleri küçük yapıp birleştir
+  const playerSelection2= playerSelection.charAt(0) + playerSelection.substring(1).toLowerCase();
+
+
   console.log(playerSelection2);
   computerSelection = computerPlay();
   console.log(computerSelection)
   //draw
  if (playerSelection2===computerSelection){
-   console.log(`Draw, Player selection: ${playerSelection2} computer selection: ${computerSelection}`)
- }
+  console.log(`Draw, Player selection: ${playerSelection2} computer selection: ${computerSelection}`) 
+  }
   //player win
  else if ((playerSelection2 =="Rock" && computerSelection=="Scissors")||(playerSelection2 =="Paper" && computerSelection =="Rock") ||( playerSelection2=="Scissors"&& computerSelection=="Paper") ) {
   player = player +1;
@@ -36,7 +39,13 @@ function playRound(playerSelection,computerSelection){
 function game() {
 
   for (let i = 0; i <5; i++) {
-    playRound()
+    playRound()  
+    if (player===5){
+      console.log("Player Wins")
+    }
+    else if (computer ===5){
+      console.log("Computer Wins")
+    }
  }
 }
 
