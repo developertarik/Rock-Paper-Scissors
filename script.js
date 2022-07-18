@@ -38,18 +38,9 @@ function playRound(playerSelection,computerSelection){
 }
 function game() {
   // bir taraf 5 olunca döngüyü durdur kodu
-  for (let i = 0; i <15; i++) {
-    playRound()  
-    if (player===5){
-      console.log("Player Wins")
-      break
-    }
-    else if (computer ===5){
-      console.log("Computer Wins")
-      break
-    }
+  
  }
-}
+
 
 //player selection
 //computer selection
