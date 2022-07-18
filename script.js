@@ -41,7 +41,17 @@ function game() {
   playRound();
  }
 
-
+ //rock
+ const rock = document.createElement("button");
+ rock.addEventListener("click",() =>{
+    playerSelection=="rock";
+    playRound();
+ })
+ //paper
+ const paper = document.createElement("button");
+//scissors
+const scissors = document.createElement("button");
+scissors.addEventListener()
 //player selection
 //computer selection
  
