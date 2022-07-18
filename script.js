@@ -44,14 +44,24 @@ function game() {
  //rock
  const rock = document.createElement("button");
  rock.addEventListener("click",() =>{
-    playerSelection=="rock";
+    playerSelection2=="rock";
+    console.log(playerSelection2)
     playRound();
  })
  //paper
  const paper = document.createElement("button");
+ paper.addEventListener("click",()=>{
+   playerSelection2 == "paper";
+   console.log(playerSelection2);
+   playRound();
+ })
 //scissors
 const scissors = document.createElement("button");
-scissors.addEventListener()
+scissors.addEventListener("click",()=>{
+  playerSelection2 == "scissors";
+  console.log(playerSelection2);
+  playRound();
+})
 //player selection
 //computer selection
  
