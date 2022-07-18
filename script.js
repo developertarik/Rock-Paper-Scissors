@@ -38,7 +38,7 @@ function playRound(playerSelection,computerSelection){
 }
 function game() {
   // bir taraf 5 olunca döngüyü durdur kodu
-  
+  playRound();
  }
 
 
