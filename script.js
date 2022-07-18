@@ -42,28 +42,29 @@ function game() {
  }
 
  //rock
- const rock = document.createElement("button");
+ const rock = document.createElement(".rock");
  rock.addEventListener("click",() =>{
-    playerSelection2=="rock";
-    console.log(playerSelection2)
+    playerSelection=="rock";
+    console.log(playerSelection)
     playRound();
  })
  //paper
- const paper = document.createElement("button");
+ const paper = document.createElement(".paper");
  paper.addEventListener("click",()=>{
-   playerSelection2 == "paper";
-   console.log(playerSelection2);
+   playerSelection == "paper";
+   console.log(playerSelection);
    playRound();
  })
 //scissors
-const scissors = document.createElement("button");
+const scissors = document.querySelector(".scissors");
 scissors.addEventListener("click",()=>{
-  playerSelection2 == "scissors";
-  console.log(playerSelection2);
+  playerSelection == "scissors";
+  console.log(playerSelection);
   playRound();
 })
 //player selection
 //computer selection
- 
+ //div 
+
 //computer selction
 game()
