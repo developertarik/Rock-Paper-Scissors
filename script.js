@@ -27,24 +27,26 @@ function playRound(playerSelection,computerSelection){
   console.log(`Draw, Player selection: ${playerSelection2} computer selection: ${computerSelection}`) 
   }
   //player win
- else if ((playerSelection2 =="rock" && computerSelection=="scissors")||(playerSelection2 =="paper" && computerSelection =="Rock") ||( playerSelection2=="scissors"&& computerSelection=="Paper") ) {
+ else if ((playerSelection2 =="rock" && computerSelection=="scissors")||(playerSelection2 =="paper" && computerSelection =="rock") ||( playerSelection2=="scissors"&& computerSelection=="paper") ) {
   player = player +1;
-  console.log(`Player Wins, Player Selection:${playerSelection2} Computer Selection:${computerSelection}`) }
+  console.log(`Player Wins,Player Score ${player} Player Selection:${playerSelection2} Computer Selection:${computerSelection}`) }
   //computer win
   else if ((computerSelection=="paper"&& playerSelection2==="rock") ||( playerSelection2=="paper"&& computerSelection=="rock" )|| (playerSelection2=="paper"&& computerSelection=="scissors")|| (playerSelection2=="scissors"&& computerSelection=="rock")){
     computer = computer +1;
-    console.log(`Computer Wins, Computer Selection :${computerSelection} player selection: ${playerSelection2}`)
+    console.log(`Computer Wins,Computer Score ${computer} Computer Selection :${computerSelection} player selection: ${playerSelection2}`)
   }
 }
 function game() {
-
-  for (let i = 0; i <5; i++) {
+  // bir taraf 5 olunca döngüyü durdur kodu
+  for (let i = 0; i <15; i++) {
     playRound()  
     if (player===5){
       console.log("Player Wins")
+      break
     }
     else if (computer ===5){
       console.log("Computer Wins")
+      break
     }
  }
 }
