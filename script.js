@@ -14,54 +14,58 @@ function computerPlay(){
 let player = 0;
 let computer = 0;
 function playRound(playerSelection,computerSelection){
-  playerSelection = prompt ("rock,paper,scissors")
+   playerSelection ;
   //1.harfi al büyük yap diğer harfleri küçük yapıp birleştir
-  const playerSelection2=playerSelection.toLowerCase();
+  
 
-
-  console.log(playerSelection2);
+  
+  console.log(playerSelection)
   computerSelection = computerPlay();
   console.log(computerSelection)
+  
   //draw
- if (playerSelection2===computerSelection){
-  console.log(`Draw, Player selection: ${playerSelection2} computer selection: ${computerSelection}`) 
+ if (playerSelection===computerSelection){
+  console.log(`Draw, Player selection: ${playerSelection} computer selection: ${computerSelection}`) 
   }
   //player win
- else if ((playerSelection2 =="rock" && computerSelection=="scissors")||(playerSelection2 =="paper" && computerSelection =="rock") ||( playerSelection2=="scissors"&& computerSelection=="paper") ) {
+ else if ((playerSelection =="rock" && computerSelection=="scissors")||(playerSelection =="paper" && computerSelection =="rock") ||( playerSelection=="scissors"&& computerSelection=="paper") ) {
   player = player +1;
-  console.log(`Player Wins,Player Score ${player} Player Selection:${playerSelection2} Computer Selection:${computerSelection}`) }
+  console.log(`Player Wins,Player Score ${player} Player Selection:${playerSelection} Computer Selection:${computerSelection}`) }
   //computer win
-  else if ((computerSelection=="paper"&& playerSelection2==="rock") ||( playerSelection2=="paper"&& computerSelection=="rock" )|| (playerSelection2=="paper"&& computerSelection=="scissors")|| (playerSelection2=="scissors"&& computerSelection=="rock")){
+  else if ((computerSelection=="paper"&& playerSelection==="rock") ||( playerSelection=="paper"&& computerSelection=="rock" )|| (playerSelection=="paper"&& computerSelection=="scissors")|| (playerSelection=="scissors"&& computerSelection=="rock")){
     computer = computer +1;
-    console.log(`Computer Wins,Computer Score ${computer} Computer Selection :${computerSelection} player selection: ${playerSelection2}`)
+    console.log(`Computer Wins,Computer Score ${computer} Computer Selection :${computerSelection} player selection: ${playerSelection}`)
   }
 }
 function game() {
   // bir taraf 5 olunca döngüyü durdur kodu
-  playRound();
  }
 
- //rock
- const rock = document.createElement(".rock");
+ const rock = document.querySelector(".rock");
  rock.addEventListener("click",() =>{
-    playerSelection=="rock";
-    console.log(playerSelection)
-    playRound();
+    playerSelection ="rock";
+    console.log(playerSelection) 
+     playRound();
+
  })
  //paper
- const paper = document.createElement(".paper");
+ const paper = document.querySelector(".paper");
  paper.addEventListener("click",()=>{
-   playerSelection == "paper";
+   playerSelection = "paper";
    console.log(playerSelection);
    playRound();
+
  })
 //scissors
 const scissors = document.querySelector(".scissors");
 scissors.addEventListener("click",()=>{
-  playerSelection == "scissors";
+  playerSelection = "scissors";
   console.log(playerSelection);
   playRound();
+
 })
+ //rock
+
 //player selection
 //computer selection
  //div 
