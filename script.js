@@ -9,18 +9,20 @@ function computerPlay(){
   let random_choice =computer_choices[Math.floor(Math.random()*computer_choices.length)] 
   return(random_choice);
 }
+
+
 //Play round
 //a
 let player = 0;
 let computer = 0;
 function playRound(playerSelection,computerSelection){
-   playerSelection ;
-  //1.harfi al büyük yap diğer harfleri küçük yapıp birleştir
   
+  //1.harfi al büyük yap diğer harfleri küçük yapıp birleştir
+  computerPlay();
+  computerSelection = computerPlay();
+
 
   
-  console.log(playerSelection)
-  computerSelection = computerPlay();
   console.log(computerSelection)
   
   //draw
