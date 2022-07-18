@@ -15,7 +15,7 @@ function computerPlay(){
 //a
 let player = 0;
 let computer = 0;
-function playRound(playerSelection,computerSelection){
+function playRound(playerSelection){
   
   //1.harfi al büyük yap diğer harfleri küçük yapıp birleştir
   computerPlay();
@@ -44,26 +44,26 @@ function game() {
  }
 
  const rock = document.querySelector(".rock");
- rock.addEventListener("click",() =>{
+ rock.addEventListener("click",(playerSelection) =>{
     playerSelection ="rock";
     console.log(playerSelection) 
-     playRound();
+     playRound(playerSelection);
 
  })
  //paper
  const paper = document.querySelector(".paper");
- paper.addEventListener("click",()=>{
+ paper.addEventListener("click",(playerSelection)=>{
    playerSelection = "paper";
    console.log(playerSelection);
-   playRound();
+   playRound(playerSelection);
 
  })
 //scissors
 const scissors = document.querySelector(".scissors");
-scissors.addEventListener("click",()=>{
+scissors.addEventListener("click",(playerSelection)=>{
   playerSelection = "scissors";
   console.log(playerSelection);
-  playRound();
+  playRound(playerSelection);
 
 })
  //rock
