@@ -20,6 +20,8 @@ function playRound(playerSelection){
   if(player===5){
     result.textContent =`Player Wins!`
     return;
+    
+    
 }
 if(computer===5){
   result.textContent="computer Wins!"
