@@ -17,6 +17,14 @@ const result = document.querySelector("div");
 let player = 0;
 let computer = 0;
 function playRound(playerSelection){
+  if(player===5){
+    result.textContent =`Player Wins!`
+    return;
+}
+if(computer===5){
+  result.textContent="computer Wins!"
+  return;
+}
   
   //1.harfi al büyük yap diğer harfleri küçük yapıp birleştir
   computerPlay();
@@ -24,7 +32,6 @@ function playRound(playerSelection){
 
 
   
-  console.log(computerSelection)
   
   //draw
  if (playerSelection===computerSelection){
@@ -37,26 +44,21 @@ function playRound(playerSelection){
   player = player +1;
   
   result.textContent = `Player Wins,Player Score ${player} Player Selection:${playerSelection} Computer Selection:${computerSelection} `;
- }
+  
+}
+  
   //computer win
   else if ((computerSelection=="paper"&& playerSelection==="rock") ||( playerSelection=="paper"&& computerSelection=="rock" )|| (playerSelection=="paper"&& computerSelection=="scissors")|| (playerSelection=="scissors"&& computerSelection=="rock")){
     computer = computer +1;
     result.textContent = `Computer Wins,Computer Score ${computer} Computer Selection :${computerSelection} player selection: ${playerSelection} `;
-
-  }
-  
-}
-function game() {
-  // bir taraf 5 olunca döngüyü durdur kodu
-  for (let i = 0; i++;) {
-    if(player==5){
-      result.textContent =`Player Wins!`
-      break
     }
-    if(computer==5){
-      result.textContent="computer Wins!"
-      break
-    }    
+}
+  function game() {
+  // bir taraf 5 olunca döngüyü durdur kodu
+  for (let i = 0; i<10; i++) {
+    playRound()
+    
+    
   }
  }
 
@@ -83,6 +85,7 @@ scissors.addEventListener("click",(playerSelection)=>{
   playRound(playerSelection);
 
 })
+
 //div
  //rock
 
