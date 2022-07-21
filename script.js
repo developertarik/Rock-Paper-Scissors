@@ -39,14 +39,25 @@ function playRound(playerSelection){
   result.textContent = `Player Wins,Player Score ${player} Player Selection:${playerSelection} Computer Selection:${computerSelection} `;
  }
   //computer win
-  if ((computerSelection=="paper"&& playerSelection==="rock") ||( playerSelection=="paper"&& computerSelection=="rock" )|| (playerSelection=="paper"&& computerSelection=="scissors")|| (playerSelection=="scissors"&& computerSelection=="rock")){
+  else if ((computerSelection=="paper"&& playerSelection==="rock") ||( playerSelection=="paper"&& computerSelection=="rock" )|| (playerSelection=="paper"&& computerSelection=="scissors")|| (playerSelection=="scissors"&& computerSelection=="rock")){
     computer = computer +1;
     result.textContent = `Computer Wins,Computer Score ${computer} Computer Selection :${computerSelection} player selection: ${playerSelection} `;
 
   }
+  
 }
 function game() {
   // bir taraf 5 olunca döngüyü durdur kodu
+  for (let i = 0; i++;) {
+    if(player==5){
+      result.textContent =`Player Wins!`
+      break
+    }
+    if(computer==5){
+      result.textContent="computer Wins!"
+      break
+    }    
+  }
  }
 
  const rock = document.querySelector(".rock");
