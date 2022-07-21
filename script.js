@@ -16,16 +16,24 @@ const result = document.querySelector("div");
 //a
 let player = 0;
 let computer = 0;
+const play = document.getElementById("playagain")
 function playRound(playerSelection){
+
   if(player===5){
-    result.textContent =`Player Wins!`
-    return;
-    
+    result.textContent =`Player Wins!`;
+    play.style.display = "visible";
+
+    play.addEventListener("click",function(){
+      window.location.reload(true);
+
+    })
+
+  
     
 }
 if(computer===5){
   result.textContent="computer Wins!"
-  return;
+  play.addEventListener("click", playRound);
 }
   
   //1.harfi al büyük yap diğer harfleri küçük yapıp birleştir

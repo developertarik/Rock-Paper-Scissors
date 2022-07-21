@@ -28,3 +28,8 @@ button{
     display:flex;
     justify-content: center;
 }
+#playagain{
+    
+    justify-content: center;
+   display:none;
+}
