@@ -9,6 +9,7 @@ function computerPlay(){
   let random_choice =computer_choices[Math.floor(Math.random()*computer_choices.length)] 
   return(random_choice);
 }
+const result = document.querySelector("div");
 
 
 //Play round
@@ -28,15 +29,20 @@ function playRound(playerSelection){
   //draw
  if (playerSelection===computerSelection){
   console.log(`Draw, Player selection: ${playerSelection} computer selection: ${computerSelection}`) 
-  }
+  result.textContent = `Draw, Player selection:${playerSelection} computer selection: ${computerSelection} `;
+
+}
   //player win
- else if ((playerSelection =="rock" && computerSelection=="scissors")||(playerSelection =="paper" && computerSelection =="rock") ||( playerSelection=="scissors"&& computerSelection=="paper") ) {
+ if ((playerSelection =="rock" && computerSelection=="scissors")||(playerSelection =="paper" && computerSelection =="rock") ||( playerSelection=="scissors"&& computerSelection=="paper") ) {
   player = player +1;
-  console.log(`Player Wins,Player Score ${player} Player Selection:${playerSelection} Computer Selection:${computerSelection}`) }
+  
+  result.textContent = `Player Wins,Player Score ${player} Player Selection:${playerSelection} Computer Selection:${computerSelection} `;
+ }
   //computer win
-  else if ((computerSelection=="paper"&& playerSelection==="rock") ||( playerSelection=="paper"&& computerSelection=="rock" )|| (playerSelection=="paper"&& computerSelection=="scissors")|| (playerSelection=="scissors"&& computerSelection=="rock")){
+  if ((computerSelection=="paper"&& playerSelection==="rock") ||( playerSelection=="paper"&& computerSelection=="rock" )|| (playerSelection=="paper"&& computerSelection=="scissors")|| (playerSelection=="scissors"&& computerSelection=="rock")){
     computer = computer +1;
-    console.log(`Computer Wins,Computer Score ${computer} Computer Selection :${computerSelection} player selection: ${playerSelection}`)
+    result.textContent = `Computer Wins,Computer Score ${computer} Computer Selection :${computerSelection} player selection: ${playerSelection} `;
+
   }
 }
 function game() {
@@ -66,6 +72,7 @@ scissors.addEventListener("click",(playerSelection)=>{
   playRound(playerSelection);
 
 })
+//div
  //rock
 
 //player selection
