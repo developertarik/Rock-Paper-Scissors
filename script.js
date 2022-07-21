@@ -44,7 +44,6 @@ if(computer===5){
   
   //draw
  if (playerSelection===computerSelection){
-  console.log(`Draw, Player selection: ${playerSelection} computer selection: ${computerSelection}`) 
   result.textContent = `Draw, Player selection:${playerSelection} computer selection: ${computerSelection} `;
 
 }
@@ -74,7 +73,6 @@ if(computer===5){
  const rock = document.querySelector(".rock");
  rock.addEventListener("click",(playerSelection) =>{
     playerSelection ="rock";
-    console.log(playerSelection) 
      playRound(playerSelection);
 
  })
@@ -82,7 +80,6 @@ if(computer===5){
  const paper = document.querySelector(".paper");
  paper.addEventListener("click",(playerSelection)=>{
    playerSelection = "paper";
-   console.log(playerSelection);
    playRound(playerSelection);
 
  })
@@ -90,7 +87,6 @@ if(computer===5){
 const scissors = document.querySelector(".scissors");
 scissors.addEventListener("click",(playerSelection)=>{
   playerSelection = "scissors";
-  console.log(playerSelection);
   playRound(playerSelection);
 
 })
