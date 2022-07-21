@@ -10,30 +10,29 @@ function computerPlay(){
   return(random_choice);
 }
 const result = document.querySelector("div");
-
-
+let play = document.getElementsByClassName("reload")
 //Play round
 //a
 let player = 0;
 let computer = 0;
-const play = document.getElementById("playagain")
 function playRound(playerSelection){
 
   if(player===5){
-    result.textContent =`Player Wins!`;
-    play.style.display = "visible";
+   result.textContent = "Player wins";
+   if( play.style.display ==="none"){
+    play.style.display = "block";
+   }
 
-    play.addEventListener("click",function(){
-      window.location.reload(true);
-
-    })
+  }
 
   
     
-}
+
 if(computer===5){
   result.textContent="computer Wins!"
-  play.addEventListener("click", playRound);
+  if( play.style.display ==="none"){
+    play.style.display = "block";
+   }
 }
   
   //1.harfi al büyük yap diğer harfleri küçük yapıp birleştir
