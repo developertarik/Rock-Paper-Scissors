@@ -8,11 +8,17 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     gap:50px;
 }
 .header{
     display:flex;
     justify-content: center;
     font-family: "Ibarra Real Nova",sans-serif;
+    margin-bottom: 150px;
+    
+}
+button{
+    width: 150px;
+    height: 50px;
 }
